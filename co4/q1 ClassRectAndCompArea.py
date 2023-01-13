@@ -1,21 +1,23 @@
 class Rectangle:
 
     def __init__(self,length,breadth):
-        Rectangle.breadth = breadth
-        Rectangle.lenght = length
-    def area():
-        return Rectangle.lenght * Rectangle.breadth
+        self.breadth = breadth
+        self.length = length
+    def area(self):
+        return self.length * self.breadth
+
+dimension1 = (input("Enter dimension of first rectangle: ").split(" "));
+dimension2 = (input("Enter dimension of second rectangle: ").split(" "));
+
+rectangle1 = Rectangle(int(dimension1[0]),int(dimension1[1]))
+rectangle2 = Rectangle(int(dimension2[0]),int(dimension2[1]))
 
 
-rectangle1 = Rectangle(2,6)
-rectangle2 = Rectangle(4,7)
-rectangle1.m = 6
-rectangle2.m = 7
-print(rectangle2.m)
-print(rectangle1.m)
-# if(rectangle1.area() > rectangle2.area()):
-#     print("reactangle with length",rectangle1.lenght,"and breadth",rectangle1.breadth," is bigger")
-# else:
-#     print("reactangle with length",rectangle2.lenght,"and breadth",rectangle2.breadth," is bigger")
+if(rectangle1.area() > rectangle2.area()):
+    print("reactangle with length", rectangle1.length ,"and breadth",rectangle1.breadth," is bigger")
+    print("ji")
+else:
+    print("reactangle with length", rectangle2.length ,"and breadth",rectangle2.breadth," is bigger")
+    print("li");
     
 

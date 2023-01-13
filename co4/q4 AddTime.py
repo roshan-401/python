@@ -12,7 +12,12 @@ class Time:
         finalSecs = int((totalSeconds%3600)%60)
         return (finalHour, finalMinutes, finalSecs)
 
-t1 = Time(2,15,00)
-t2 = Time(1,45,30)
-print(t1+t2)
+time1 = (input("Enter time 1: ").split(":"));
+time2 = (input("Enter time 2 ").split(":"));
+
+
+t1 = Time(int(time1[0]),int(time1[1]),int(time1[2]))
+t2 = Time(int(time2[0]),int(time2[1]),int(time2[2]))
+
+print("added time: ",t1+t2)
 

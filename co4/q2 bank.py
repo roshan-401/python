@@ -5,6 +5,9 @@ class Account:
         self.type = type
         self.balance = balance
     def withdraw(self,amount):
+        if(self.balance < amount):
+            print ("insufficient balance")
+            return
         self.balance -= amount
         return self.balance
     def deposit(self,amount):
@@ -15,11 +18,15 @@ class Account:
         Account.balance += amount
 
     
+
 acc1 = Account(5630,'arun','savings',2300)
 acc2 = Account(7591,'abhi','current',1900)
 
+acc1.withdraw(acc1.balance+50) # insufficient balance 
 
-acc1.transfer(600,acc2)
+acc2.deposit(30) #deposit to account 2
+
+acc1.transfer(600,acc2) #tranfer to account 2
 
 print("propertise of "+ acc1.name , vars(acc1))
 print("propertise of "+ acc2.name , vars(acc2))

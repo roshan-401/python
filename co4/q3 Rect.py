@@ -7,11 +7,18 @@ class Rectangle:
         area2 = other.__breadth * other.__length
         return area1 < area2
     
-a1 = Rectangle(5,6)
-a2 = Rectangle(4,7)
 
-print (a1.get())
-print(a1>a2)
-print(a1<a2)
+dimension1 = (input("Enter dimension of first rectangle: ").split(" "));
+dimension2 = (input("Enter dimension of second rectangle: ").split(" "));
 
+rectangle1 = Rectangle(int(dimension1[0]),int(dimension1[1]))
+rectangle2 = Rectangle(int(dimension2[0]),int(dimension2[1]))
+
+
+
+if(rectangle1 > rectangle2):
+    print("reactangle 1 is bigger")
+else:
+    print("reactangle 2 is bigger")
+    
     
